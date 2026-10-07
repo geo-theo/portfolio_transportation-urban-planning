@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Agustina Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Agustina Regular"),
+    url("./assets/fonts/Agustina.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Media Query */
+@media (max-width: 1380px) {
+  html,
+  body {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+a:focus-visible,button:focus-visible,input:focus-visible { outline: 3px solid #d3a324; outline-offset: 4px; }
+.greeting-text-p,.skills-text,.skills-text-subtitle,.project-subtitle { line-height: 1.7; }
+.greeting-image-div,.skills-image-div { min-width: 0; }
+.greeting-image-div > img { width: 100%; object-fit: contain; }
+.project-card .project-image .card-image { width: 100%; max-height: 250px; object-fit: contain; }
+.contact-detail-email { overflow-wrap: anywhere; }
+.education-card { margin-bottom: 35px; }
+@media (max-width:768px) {
+  .greeting-image-div { height: auto !important; }
+  .button-greeting-div { gap: 12px; justify-content: center !important; }
+  .greeting-text-p { line-height: 1.7 !important; }
+}
+@media (prefers-reduced-motion:reduce) {
+  html,body { scroll-behavior: auto; }
+  *,*::before,*::after { animation: none !important; transition: none !important; }
+}
